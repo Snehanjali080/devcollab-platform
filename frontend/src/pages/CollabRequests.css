@@ -1,0 +1,83 @@
+.requests-page {
+  min-height: 100vh;
+  padding: 40px;
+  background: linear-gradient(120deg, #8b81d2, #130855);
+  text-align: center;
+}
+
+.requests-title {
+  color: white;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+/* Container */
+.requests-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Card */
+.request-card {
+  width: 280px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.request-card:hover {
+  transform: translateY(-5px);
+}
+
+.request-card h3 {
+  margin-bottom: 10px;
+}
+
+.request-card p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* Buttons */
+.btn-group {
+  display: flex;
+  gap: 10px;
+}
+
+.accept-btn {
+  flex: 1;
+  padding: 10px;
+  background: #28a745;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.accept-btn:hover {
+  background: #1e7e34;
+}
+
+.reject-btn {
+  flex: 1;
+  padding: 10px;
+  background: #dc3545;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.reject-btn:hover {
+  background: #b52a37;
+}
+
+/* No requests */
+.no-req {
+  color: white;
+  font-size: 18px;
+}

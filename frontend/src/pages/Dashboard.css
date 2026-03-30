@@ -1,0 +1,85 @@
+.dashboard-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(120deg, #b2f233, #0e3906);
+}
+
+/* NAVBAR */
+.navbar {
+  height: 70px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 40px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logout-btn {
+  padding: 8px 15px;
+  background: #ff4d4d;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* CONTENT */
+.dashboard-content {
+  flex: 1;
+  padding: 40px;
+  text-align: center;
+  color: white;
+}
+
+.dashboard-content h1 {
+  font-size: 32px;
+}
+
+.dashboard-content p {
+  margin-bottom: 30px;
+}
+
+/* CARD GRID */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* CARDS */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: #2d6cdf;
+  color: white;
+}
