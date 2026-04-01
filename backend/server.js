@@ -17,7 +17,12 @@ const devRoutes = require("./routes/devRoutes");
 connectDB();
 
 // middleware
-app.use(cors());
+const cors = require("cors");
+
+app.use(cors({
+  origin: "https://devcollab-platform.vercel.app",
+  credentials: true
+}));
 app.use(express.json()); // IMPORTANT
 app.use(express.urlencoded({ extended: true }));
 
@@ -49,7 +54,8 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://devcollab-platform.vercel.app/",
+    origin: "https://devcollab-platform.vercel.app",
+    methods: ["GET", "POST"],
     credentials: true
   }
 });
