@@ -49,7 +49,8 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "*"
+    origin: "https://devcollab-platform.vercel.app/",
+    credentials: true
   }
 });
 let onlineUsers = [];

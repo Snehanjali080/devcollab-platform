@@ -4,7 +4,7 @@ import API from "../services/api";
 import { useRef } from "react";
 import "./Chat.css";
 import { useParams } from "react-router-dom";
-const socket = io("http://localhost:5000");
+const socket = io("https://devcollab-platform.onrender.com");
 
 function Chat(){
 
