@@ -19,14 +19,18 @@ e.preventDefault();
 try{
 
 const res = await API.post("/auth/login",{email,password});
-
+/*
 localStorage.setItem("token",res.data.token);
 localStorage.setItem("username",res.data.user.email);
 
 alert("Login Successful");
+localStorage.setItem("username", res.data.user.name);
+localStorage.setItem("userId", res.data.user._id);*/ // ADD THIS
 localStorage.setItem("token", res.data.token);
 localStorage.setItem("username", res.data.user.name);
-localStorage.setItem("userId", res.data.user._id); // ADD THIS
+localStorage.setItem("userId", res.data.user._id);
+alert("Login Successful");
+
 
 navigate("/dashboard");
 

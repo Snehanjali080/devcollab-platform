@@ -4,7 +4,6 @@ import API from "../services/api";
 import { useRef } from "react";
 import "./Chat.css";
 import { useParams } from "react-router-dom";
-const socket = io("https://devcollab-platform.onrender.com");
 
 function Chat(){
 
@@ -31,7 +30,7 @@ const sendMessage = ()=>{
 
 
 useEffect(()=>{
-
+const socket = io("https://devcollab-platform.onrender.com");
   socket.on("receive_message",(data)=>{
     setMessages((prev)=>[...prev,data]);
   });
@@ -43,7 +42,7 @@ useEffect(()=>{
 },[]);
 
 useEffect(() => {
-
+const socket = io("https://devcollab-platform.onrender.com");
   const fetchMessages = async () => {
     try {
       const res = await API.get(`/messages/${projectId}`);
@@ -79,13 +78,14 @@ socket.on("user_typing",(data)=>{
 },[]);
 const bottomRef = useRef(null);
 useEffect(() => {
+
   bottomRef.current?.scrollIntoView({ behavior: "smooth" });
 }, [messages]);
 
 
 
 useEffect(()=>{
-
+const socket = io("https://devcollab-platform.onrender.com");
   socket.emit("user_online", localStorage.getItem("username"));
 
 },[]);
@@ -93,7 +93,7 @@ useEffect(()=>{
 const [onlineUsers,setOnlineUsers] = useState([]);
 
 useEffect(()=>{
-
+const socket = io("https://devcollab-platform.onrender.com");
   socket.on("online_users",(users)=>{
     setOnlineUsers(users);
   });
