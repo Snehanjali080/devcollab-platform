@@ -154,24 +154,17 @@ const devRoutes = require("./routes/devRoutes");
 
 const app = express();
 
-// Connect database
 connectDB();
 
-// CORS — single clean definition
-const corsOptions = {
+app.use(cors({
   origin: "https://devcollab-platform.vercel.app",
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
-};
+}));
 
-app.use(cors(corsOptions));
-app.options(cors(corsOptions));
-
-// Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/profile", profileRoutes);
 app.use("/api/collab", collabRoutes);
@@ -183,7 +176,6 @@ app.get("/", (req, res) => {
   res.send("Developer Collaboration Platform API running");
 });
 
-// Server + Socket.IO
 const server = http.createServer(app);
 
 const io = new Server(server, {
@@ -199,7 +191,6 @@ let onlineUsers = [];
 io.on("connection", (socket) => {
   console.log("User connected:", socket.id);
 
-  // Track current user for this socket
   let currentUser = null;
 
   socket.on("user_online", (user) => {
@@ -221,10 +212,8 @@ io.on("connection", (socket) => {
         projectId: data.projectId,
         message: data.message
       });
-
       const savedMessage = await newMessage.save();
       const populatedMsg = await savedMessage.populate("sender", "name");
-
       io.emit("receive_message", populatedMsg);
     } catch (err) {
       console.error("Message save error:", err);
@@ -232,7 +221,6 @@ io.on("connection", (socket) => {
     }
   });
 
-  // Single disconnect handler
   socket.on("disconnect", () => {
     console.log("User disconnected:", socket.id);
     onlineUsers = onlineUsers.filter(u => u !== currentUser);
