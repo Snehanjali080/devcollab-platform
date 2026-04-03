@@ -1,7 +1,6 @@
 require("dotenv").config();
 
 const express = require("express");
-const cors = require("cors");
 
 const connectDB = require("./config/db");
 
@@ -19,10 +18,14 @@ connectDB();
 // middleware
 const cors = require("cors");
 
-app.use(cors({
-  origin: "https://devcollab-platform.vercel.app",
+const corsOptions = {
+  origin: "https://devcollab-platform.vercel.app", // NO slash
+  methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
-}));
+};
+
+app.use(cors(corsOptions));
+app.options("*", cors(corsOptions)); // 🔥 VERY IMPORTANT
 app.use(express.json()); // IMPORTANT
 app.use(express.urlencoded({ extended: true }));
 
