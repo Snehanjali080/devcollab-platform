@@ -16,6 +16,7 @@ const devRoutes = require("./routes/devRoutes");
 connectDB();
 
 // middleware
+/*
 const cors = require("cors");
 
 const corsOptions = {
@@ -23,6 +24,11 @@ const corsOptions = {
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 };
+*/
+const cors = require('cors');
+app.use(cors({
+  origin: 'https://devcollab-platform.vercel.app'
+}));
 
 app.use(cors(corsOptions));
 app.options("*", cors(corsOptions)); // 🔥 VERY IMPORTANT
@@ -54,7 +60,7 @@ const http = require("http");
 const { Server } = require("socket.io");
 
 const server = http.createServer(app);
-
+/*
 const io = new Server(server, {
   cors: {
     origin: "https://devcollab-platform.vercel.app",
@@ -62,6 +68,16 @@ const io = new Server(server, {
     credentials: true
   }
 });
+*/
+
+const io = require("socket.io")(server, {
+  cors: {
+    // Replace with your specific frontend URL
+    origin: "https://devcollab-platform.vercel.app",
+    methods: ["GET", "POST"]
+  }
+});
+
 let onlineUsers = [];
 io.on("connection", (socket) => {
   console.log("User connected:", socket.id);
