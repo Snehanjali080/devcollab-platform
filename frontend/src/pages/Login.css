@@ -25,7 +25,7 @@
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 2px; /* space between logo and text */
+  gap: 2px;
   margin-bottom: 40px;
 }
 
@@ -58,12 +58,12 @@
   font-weight:bold;
   margin-bottom:20px;
 }
+
 .green-btn{
   background-color: #0e3906;
   color: white;
   border-radius:10px;
   height:50px;
-
 }
 
 .input-box{
@@ -73,9 +73,29 @@
   height:40px;
   border-radius: 10px;
 }
+
 .input-box:focus{
   border-color: rgb(8, 36, 8);
 }
+
 .input-box:placeholder{
-  color: rgb(17, 58, 17)
+  color: rgb(17, 58, 17);
+}
+
+.register-text {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #444;
+  text-align: center;
+}
+
+.register-link {
+  color: #0e3906;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.register-link:hover {
+  color: #00ff88;
 }
