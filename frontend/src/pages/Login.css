@@ -36,13 +36,14 @@
 }
 
 .logo-img {
+  
   width: 44px;
   height: 44px;
   object-fit: contain;
 }
 
 .welcome-tag {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 700;
   color: #f1f5f9;
 }

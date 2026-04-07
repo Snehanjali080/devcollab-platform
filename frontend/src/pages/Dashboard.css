@@ -24,11 +24,11 @@
 
 .nav-left h2 {
   color: #f1f5f9;
-  font-size: 18px;
+  font-size: 23px;
   font-weight: 700;
 }
 
-.logo { width: 36px; }
+.logo { width: 40px; }
 
 .nav-right {
   display: flex;
@@ -38,7 +38,7 @@
 
 .nav-right span {
   color: #94a3b8;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 .logout-btn {
@@ -103,7 +103,7 @@
 
 .card p {
   font-size: 13px;
-  color: #94a3b8;
+  color: #bfd1ea;
   margin: 0;
 }
 
