@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../services/api";
 import "./Login.css";
-import Image_login from "./login_img.jpeg";
+import Image_login from "./login_img.gif";
 import logo from "./dev-collab_logo.png";
 
 function Login() {
