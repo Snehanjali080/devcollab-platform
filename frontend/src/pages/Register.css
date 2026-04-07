@@ -1,160 +1,148 @@
+/* ── DARK THEME: Register ── */
+* { box-sizing: border-box; }
+
 .register-page {
   height: 100vh;
-  background: linear-gradient(120deg, #00ff88, #121212);
+  background: #0f172a;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .register-card {
-  width: 1200px;
-  height: 600px;
-  background: white;
-  border-radius: 10px;
+  width: 1100px;
+  max-width: 95vw;
+  height: 620px;
+  background: #1e293b;
+  border-radius: 16px;
   display: flex;
   overflow: hidden;
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
+  border: 1px solid #334155;
 }
 
 .register-left {
   flex: 1;
-  align-content: center;
-  padding: 80px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 2px;
-  margin-bottom: 30px;
+  gap: 10px;
+  margin-bottom: 28px;
 }
 
 .logo-img {
-  width: 100px;
-  height: 100px;
+  width: 44px;
+  height: 44px;
   object-fit: contain;
 }
 
 .welcome-tag {
-  font-size: 32px;
-  font-weight: bold;
+  font-size: 20px;
+  font-weight: 700;
+  color: #f1f5f9;
 }
 
 .register-title {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 22px;
 }
 
 .input-box {
-  border-color: #b2f233;
-  background-color: #b2f233;
   width: 100%;
-  height: 40px;
-  border-radius: 10px;
-  padding: 0 12px;
-  margin-bottom: 12px;
-  border: none;
-  outline: none;
+  height: 44px;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 0 14px;
+  color: #f1f5f9;
   font-size: 14px;
+  outline: none;
+  margin-bottom: 14px;
+  transition: border-color 0.2s;
 }
 
-.input-box:focus {
-  border: 2px solid rgb(8, 36, 8);
-}
+.input-box::placeholder { color: #64748b; }
+.input-box:focus { border-color: #38bdf8; }
 
 .green-btn {
-  background-color: #0e3906;
-  color: white;
-  border-radius: 10px;
-  height: 50px;
   width: 100%;
+  height: 46px;
+  background: #38bdf8;
+  color: #0f172a;
+  font-size: 15px;
+  font-weight: 700;
   border: none;
-  font-size: 16px;
+  border-radius: 8px;
   cursor: pointer;
-  margin-top: 8px;
+  transition: background 0.2s;
+  margin-top: 4px;
 }
 
-.green-btn:hover {
-  background-color: #1a5c0a;
-}
+.green-btn:hover { background: #7dd3fc; }
 
 .login-text {
-  margin-top: 16px;
-  font-size: 14px;
-  color: #444;
+  margin-top: 18px;
+  font-size: 13px;
+  color: #94a3b8;
   text-align: center;
 }
 
 .login-link {
-  color: #0e3906;
-  font-weight: bold;
+  color: #38bdf8;
+  font-weight: 600;
   cursor: pointer;
   text-decoration: underline;
 }
 
-.login-link:hover {
-  color: #00cc66;
-}
+.login-link:hover { color: #7dd3fc; }
 
-/* Right side illustration */
 .register-right {
-  flex: 2;
-  background: linear-gradient(135deg, #0e3906, #1a5c0a);
+  flex: 1.4;
+  background: #0f172a;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   overflow: hidden;
+  padding: 40px;
 }
 
 .register-illustration {
   position: relative;
   z-index: 2;
   text-align: center;
-  padding: 40px;
 }
 
 .illustration-circle {
   position: absolute;
   border-radius: 50%;
-  opacity: 0.15;
-  background: #00ff88;
+  opacity: 0.08;
+  background: #38bdf8;
 }
 
-.circle-1 {
-  width: 300px;
-  height: 300px;
-  top: -80px;
-  right: -80px;
-}
-
-.circle-2 {
-  width: 200px;
-  height: 200px;
-  bottom: -60px;
-  left: -60px;
-}
-
-.circle-3 {
-  width: 150px;
-  height: 150px;
-  bottom: 80px;
-  right: 60px;
-}
+.circle-1 { width: 320px; height: 320px; top: -100px; right: -100px; }
+.circle-2 { width: 220px; height: 220px; bottom: -70px; left: -70px; }
+.circle-3 { width: 160px; height: 160px; bottom: 80px; right: 60px; }
 
 .illustration-text h2 {
-  font-size: 48px;
-  font-weight: bold;
-  color: #00ff88;
+  font-size: 46px;
+  font-weight: 800;
+  color: #38bdf8;
+  line-height: 1.15;
   margin: 0;
-  line-height: 1.2;
 }
 
 .illustration-text p {
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+  color: #94a3b8;
   margin-top: 20px;
-  max-width: 300px;
-  line-height: 1.6;
+  max-width: 280px;
+  line-height: 1.7;
 }

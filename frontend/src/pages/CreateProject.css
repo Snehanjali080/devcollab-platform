@@ -1,52 +1,65 @@
+/* ── DARK THEME: Create Project ── */
 .create-page {
-  height: 100vh;
-  background: linear-gradient(120deg, #8b81d2, #130855);
+  min-height: 100vh;
+  background: #0f172a;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 40px;
 }
 
 .create-card {
-  width: 400px;
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+  width: 460px;
+  background: #1e293b;
+  padding: 40px;
+  border-radius: 16px;
+  border: 1px solid #334155;
   text-align: center;
 }
 
 .create-card h2 {
-  margin-bottom: 20px;
+  color: #f1f5f9;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 28px;
 }
 
-/* Inputs */
 .create-card input,
 .create-card textarea {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  padding: 12px 14px;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  color: #f1f5f9;
+  font-size: 14px;
   outline: none;
+  margin-bottom: 14px;
+  transition: border-color 0.2s;
 }
 
-/* Textarea height */
+.create-card input::placeholder,
+.create-card textarea::placeholder { color: #64748b; }
+
+.create-card input:focus,
+.create-card textarea:focus { border-color: #38bdf8; }
+
 .create-card textarea {
-  height: 100px;
+  height: 110px;
   resize: none;
 }
 
-/* Button */
 .create-card button {
   width: 100%;
-  padding: 12px;
-  background: #2d6cdf;
-  color: white;
+  padding: 13px;
+  background: #38bdf8;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 15px;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background 0.2s;
 }
 
-.create-card button:hover {
-  background: #1b4fbf;
-}
+.create-card button:hover { background: #7dd3fc; }

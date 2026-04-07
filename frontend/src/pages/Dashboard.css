@@ -1,19 +1,19 @@
+/* ── DARK THEME: Dashboard ── */
 .dashboard-container {
-  height: 100vh;
+  min-height: 100vh;
+  background: #0f172a;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(120deg, #b2f233, #0e3906);
 }
 
-/* NAVBAR */
 .navbar {
-  height: 70px;
-  background: white;
+  height: 64px;
+  background: #1e293b;
+  border-bottom: 1px solid #334155;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
-  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+  padding: 0 32px;
 }
 
 .nav-left {
@@ -22,64 +22,95 @@
   gap: 10px;
 }
 
-.logo {
-  width: 40px;
+.nav-left h2 {
+  color: #f1f5f9;
+  font-size: 18px;
+  font-weight: 700;
 }
+
+.logo { width: 36px; }
 
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
+}
+
+.nav-right span {
+  color: #94a3b8;
+  font-size: 14px;
 }
 
 .logout-btn {
-  padding: 8px 15px;
-  background: #ff4d4d;
-  border: none;
-  color: white;
-  border-radius: 5px;
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid #475569;
+  color: #f1f5f9;
+  border-radius: 8px;
   cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s;
 }
 
-/* CONTENT */
+.logout-btn:hover {
+  background: #ef4444;
+  border-color: #ef4444;
+}
+
 .dashboard-content {
   flex: 1;
-  padding: 40px;
+  padding: 48px 40px;
   text-align: center;
-  color: white;
 }
 
 .dashboard-content h1 {
-  font-size: 32px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 8px;
 }
 
 .dashboard-content p {
-  margin-bottom: 30px;
+  color: #94a3b8;
+  margin-bottom: 40px;
+  font-size: 15px;
 }
 
-/* CARD GRID */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-/* CARDS */
 .card {
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
+  background: #1e293b;
+  padding: 28px 20px;
+  border-radius: 14px;
   cursor: pointer;
-  transition: 0.3s;
-  box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+  transition: all 0.2s;
+  border: 1px solid #334155;
+  text-align: center;
 }
 
 .card h3 {
-  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 13px;
+  color: #94a3b8;
+  margin: 0;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  background: #2d6cdf;
-  color: white;
+  transform: translateY(-4px);
+  border-color: #38bdf8;
+  background: #1e293b;
 }
+
+.card:hover h3 { color: #38bdf8; }
